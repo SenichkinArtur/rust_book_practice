@@ -12,6 +12,9 @@ fn main() {
     println!("result is {result}");
 
     nested_loops();
+    while_loop();
+    for_loop();
+    for_range_loop();
 }
 
 fn nested_loops() {
@@ -40,4 +43,30 @@ fn nested_loops() {
     }
 
     println!("loops finished");
+}
+
+fn while_loop() {
+    let mut count = 3;
+
+    while count != 0 {
+        println!("count is {count}");
+
+        count -= 1;
+    }
+
+    println!("while loop finished");
+}
+
+fn for_loop() {
+    let array = [1, 2, 3, 4, 5];
+
+    for item in array {
+        println!("items is {item}");
+    }
+}
+
+fn for_range_loop() {
+    for item in (1..5).rev() {
+        println!("item is {item}");
+    }
 }
